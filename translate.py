@@ -8,11 +8,12 @@ def translate(phrase):
     #Then we want to loop through every letter.
     for letters in phrase:
         #Check if any of the letter consists of the vowel letter.
-        if letters == "a" or letters == "e" or letters == "i" or letters == "o" or letters == "u":
+        if letters in "AEIOUaeiou":
+        # if letters == "a" or letters == "e" or letters == "i" or letters == "o" or letters == "u":
             #convert the vowel letter to a.
             new_phrase += "a"
         else:
             new_phrase += letters
     return(new_phrase)
 
-print(translate("umbrella"))
+print(translate("Umbrella"))
