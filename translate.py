@@ -8,10 +8,15 @@ def translate(phrase):
     #Then we want to loop through every letter.
     for letters in phrase:
         #Check if any of the letter consists of the vowel letter.
-        if letters in "AEIOUaeiou":
+        #converts all the letters to lowercase and check for vowels.
+        if letters.lower() in "aeiou":
+            #check if letter is upper case. Helps solve caps issues.
+            if letters.isupper():
+                new_phrase += "A"
+            else:
         # if letters == "a" or letters == "e" or letters == "i" or letters == "o" or letters == "u":
-            #convert the vowel letter to a.
-            new_phrase += "a"
+        #convert the vowel letter to a.
+                new_phrase += "a"
         else:
             new_phrase += letters
     return(new_phrase)
